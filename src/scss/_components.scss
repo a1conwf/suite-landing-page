@@ -1,0 +1,53 @@
+@import "./base";
+
+//Buttons
+
+.btn {
+	font-weight: 700;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	cursor: pointer;
+
+	&.primary {
+		max-width: 256px;
+		font-size: 1.8rem;
+		color: $CreamWhite;
+		line-height: 32px;
+		letter-spacing: -0.18px;
+		background-color: $darkBlue;
+		padding: 15px 31px 14px 32px;
+		transition: background 0.3s ease-out;
+
+		&:hover {
+			background: linear-gradient(135deg, #a060ff 0%, #cb30e3 49.21%, #ffa84e 100%);
+		}
+	}
+
+	&.secondary {
+		max-width: 182px;
+		font-size: 1.4rem;
+		color: $darkBlue;
+		line-height: 24px;
+		letter-spacing: -0.14px;
+		border: 1px solid $darkBlue;
+		background-color: transparent;
+		padding: 12px 16.5px 12px 15.5px;
+		transition: all 0.3s ease-out;
+
+		&:hover {
+			color: $CreamWhite;
+			background-color: $darkBlue;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.secondary {
+		max-width: 219px;
+		font-size: 1.6rem;
+		line-height: 32px;
+		letter-spacing: -0.16px;
+		padding: 12px 24.5px 12px 23.5px;
+	}
+}

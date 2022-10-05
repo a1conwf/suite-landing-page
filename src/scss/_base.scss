@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap");
+
+//Resets
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+//Variables
+
+$cream: #f3ede7;
+$CreamWhite: #faf8f6;
+$darkBlue: #172339;
+$grey: #49566d;
+
+$mainFont: "Epilogue", sans-serif;
+
+//Mixins
+
+@mixin flexCenter($direction, $justify, $align) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+//Typography
+
+body {
+	font-size: 1.6rem;
+	font-family: $mainFont;
+	font-weight: 400;
+	line-height: 28px;
+	letter-spacing: 0.09px;
+	background-color: #f2f2f2;
+	color: $grey;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 400;
+}
+
+h1 span,
+h2 span {
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 3.8rem;
+	line-height: 44px;
+	letter-spacing: -0.53px;
+	color: $darkBlue;
+}
+
+h2,
+h3 {
+	color: $CreamWhite;
+}
+
+h2 {
+	font-size: 4rem;
+	line-height: 48px;
+	letter-spacing: -0.42px;
+}
+
+@media screen and (max-width: 375px) {
+	h1 {
+		font-size: 3.4rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	h1 {
+		font-size: 5.6rem;
+		line-height: 64px;
+		letter-spacing: -0.78px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	h1 {
+		font-size: 7.2rem;
+		line-height: 78px;
+		letter-spacing: -1px;
+	}
+
+	h2 {
+		font-size: 4.8rem;
+		line-height: 56px;
+		letter-spacing: -0.5px;
+	}
+}

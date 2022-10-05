@@ -1,0 +1,21 @@
+@import "../../scss/base";
+
+.header {
+	margin: 24px 16px 56px 16px;
+
+	&__inner {
+		@include flexCenter(row, space-between, center);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.header {
+		margin: 40px 40px 80px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.header {
+		margin: 50px 165px 67px;
+	}
+}

@@ -1,0 +1,196 @@
+@import "../../scss/base";
+
+.hero {
+	&__inner,
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__content-solution {
+		position: relative;
+
+		img {
+			position: absolute;
+			top: -10%;
+			right: 12%;
+			width: 152px;
+			height: 19px;
+			opacity: 0.1;
+		}
+
+		h1,
+		p {
+			margin-bottom: 32px;
+		}
+
+		button {
+			margin-bottom: 56px;
+		}
+	}
+
+	&__content-img {
+		height: 240px;
+		margin-bottom: 56px;
+
+		img {
+			width: 100%;
+		}
+
+		.img-desk {
+			display: none;
+		}
+	}
+
+	&__stats {
+		@include flexCenter(column, space-between, center);
+		text-align: center;
+		margin-bottom: 350px;
+	}
+
+	&__stat {
+		margin-bottom: 32px;
+
+		&-qty,
+		&-name {
+			text-transform: uppercase;
+		}
+
+		&-qty {
+			font-size: 4.8rem;
+			font-weight: 700;
+			line-height: 56px;
+			color: $darkBlue;
+		}
+
+		&-name {
+			line-height: 26px;
+			letter-spacing: 2.5px;
+		}
+
+		&-name:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__stat:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.hero {
+		&__content {
+			position: relative;
+			align-items: center;
+			flex-direction: row;
+		}
+
+		&__content-solution {
+			position: relative;
+			top: 88px;
+
+			img {
+				right: 15%;
+				width: 231px;
+				height: 29px;
+				opacity: 1;
+			}
+
+			h1,
+			p {
+				margin-bottom: 40px;
+			}
+
+			h1 {
+				max-width: 540px;
+			}
+
+			p {
+				max-width: 350px;
+			}
+
+			button {
+				margin-bottom: 0;
+			}
+		}
+
+		&__content-img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin-bottom: 0;
+
+			img {
+				position: relative;
+				width: 281px;
+				height: 482px;
+				z-index: -1;
+			}
+
+			.img-mob {
+				display: none;
+			}
+
+			.img-desk {
+				display: block;
+			}
+		}
+
+		&__stats {
+			@include flexCenter(row, space-around, center);
+			margin-top: 220px;
+		}
+
+		&__stat {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.hero {
+		margin-bottom: 400px;
+		&__inner,
+		&__content {
+			flex-direction: row;
+		}
+
+		&__content-solution {
+			img {
+				right: 8%;
+			}
+
+			h1 {
+				max-width: 635px;
+				margin-bottom: 40px;
+			}
+
+			p {
+				max-width: 328px;
+				margin-bottom: 52px;
+			}
+		}
+
+		&__content-img {
+			position: relative;
+			top: -103px;
+			right: 18%;
+			margin-bottom: 0;
+
+			img {
+				width: 350px;
+				height: 600px;
+			}
+		}
+
+		&__stats {
+			@include flexCenter(column, space-around, flex-start);
+			position: relative;
+			top: 88px;
+			right: 50px;
+			text-align: left;
+			margin: 0;
+		}
+	}
+}

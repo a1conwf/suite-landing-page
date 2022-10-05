@@ -1,0 +1,67 @@
+@import "../../scss/_base";
+
+.footer {
+	position: relative;
+	z-index: 999;
+	padding: 56px 0 80px;
+	background-color: $cream;
+
+	&__inner {
+		@include flexCenter(column, center, center);
+
+		.logo,
+		.copyright {
+			margin-bottom: 33px;
+		}
+
+		.logo {
+			width: 81px;
+			height: 32px;
+		}
+
+		.copyright {
+			font-size: 15px;
+			line-height: 32px;
+			letter-spacing: 0.08px;
+			color: $grey;
+		}
+
+		.socials__list {
+			display: flex;
+
+			li {
+				margin-right: 28px;
+				cursor: pointer;
+				transition: 0.2s ease-in;
+
+				&:hover {
+					opacity: 0.5;
+				}
+			}
+		}
+
+		.socials__list li:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.footer {
+		padding: 72px 0 80px;
+		&__inner {
+			@include flexCenter(row, space-between, center);
+
+			.logo,
+			.copyright {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.footer {
+		padding: 95px 0 72px;
+	}
+}
